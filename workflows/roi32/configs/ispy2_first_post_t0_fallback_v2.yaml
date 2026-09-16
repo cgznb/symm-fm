@@ -1,0 +1,40 @@
+schema: ispy2_first_post_unregistered_training_v1
+source_manifest: '@data/ispy2_first_post_unregistered/manifest.json'
+source_verification: '@data/ispy2_first_post_unregistered/verification.json'
+baseline_bundle: '@workspace/MAM/MOTFM-tumor-first/runs/registered_strict_a_z96_target_oracle/data_bundle'
+output_dir: '@artifacts/mewm/runs/first_post_t0_fallback_v2_20260915'
+seed: 2026
+cohort:
+  policy: all_visits_preserve_patient_split_v1
+  expected_visits: 3777
+  expected_patients: 1100
+  validation_fraction: 0.1
+  require_phase_metadata: true
+data:
+  phase_index: 1
+  registered: false
+  expected_train_visits: 3397
+  expected_val_visits: 380
+  target_spacing_xyz:
+  - 0.7032
+  - 0.7032
+  - 2.0
+  output_shape_zyx:
+  - 96
+  - 256
+  - 256
+  orientation: LPS
+  training_crop: tumor_union_adaptive
+  validation_crop: tumor_union_adaptive
+  tumor_crop:
+    prepared_data: '@artifacts/mewm/runs/first_post_all_visits_90_10_v1_20260913/data'
+    segmentation_root: '@data/ispy2_first_post_mamamia_segmentation_v1'
+    margin_mm: 20.0
+    empty_mask: t0_mask
+    reference_mapping: physical_lps
+    components: keep_all
+  normalization: train_resampled_nonzero_global_zscore
+  preparation_workers: 2
+  num_workers: 1
+training:
+  enabled: false

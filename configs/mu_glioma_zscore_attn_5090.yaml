@@ -1,0 +1,19 @@
+extends: mu_glioma_zscore_ablation_5090.yaml
+project:
+  name: ispy2-symmflow3d-mu-glioma-zscore-attn
+  output_dir: outputs/mu_glioma_zscore_attn_5090
+conditions:
+  token_dim: 192
+velocity:
+  channels:
+  - 64
+  - 128
+  - 256
+  - 320
+  num_head_channels:
+  - 0
+  - 0
+  - 32
+  - 64
+  cross_attention_dim: 192
+  transformer_num_layers: 2

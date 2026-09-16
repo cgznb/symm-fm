@@ -1,0 +1,22 @@
+extends: base.yaml
+project:
+  output_dir: outputs/small_gpu
+autoencoder:
+  channels:
+  - 32
+  - 64
+  - 128
+  latent_channels: 8
+  norm_num_groups: 16
+velocity:
+  channels:
+  - 64
+  - 128
+  - 256
+  num_head_channels:
+  - 0
+  - 32
+  - 32
+  norm_num_groups: 16
+flow:
+  gradient_accumulation: 4

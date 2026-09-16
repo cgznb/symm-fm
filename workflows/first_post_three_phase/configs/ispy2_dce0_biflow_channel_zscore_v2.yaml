@@ -1,0 +1,19 @@
+schema_version: mewm_ispy2_dce0_biflow_rectified_flow_config_v2
+base_config: '@repo/workflows/first_post_three_phase/configs/ispy2_dce0_biflow_data_text_channel_zscore_v2.yaml'
+model:
+  preset: biflownet_original_single_res_ispy2_v1
+training:
+  batch_size: 3
+  accumulate_grad_batches: 1
+  max_epochs: 250
+  precision: bf16-mixed
+  num_workers: 2
+  dynamics_learning_rate: 0.0001
+  text_lora_learning_rate: 0.0001
+  weight_decay: 0.05
+  gradient_clip_val: 1.0
+  evaluation_solver_steps: 8
+  early_stopping_patience: 12
+runtime:
+  output_root: '@artifacts/ispy2/runs/ispy2_dce0_biflow_channel_zscore_v2'
+  seed: 2026

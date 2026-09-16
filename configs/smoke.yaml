@@ -1,0 +1,58 @@
+extends: base.yaml
+project:
+  output_dir: outputs/smoke
+data:
+  phase_channels:
+  - pre
+  - early
+  - late
+  spatial_size:
+  - 16
+  - 32
+  - 32
+  target_spacing_mm:
+  - 4.0
+  - 4.0
+  - 4.0
+conditions:
+  token_dim: 32
+autoencoder:
+  channels:
+  - 16
+  - 32
+  num_res_blocks: 1
+  attention_levels:
+  - false
+  - false
+  latent_channels: 4
+  norm_num_groups: 8
+  max_epochs: 1
+velocity:
+  latent_channels: 4
+  channels:
+  - 32
+  - 64
+  num_res_blocks: 1
+  attention_levels:
+  - false
+  - true
+  num_head_channels:
+  - 0
+  - 16
+  norm_num_groups: 8
+  cross_attention_dim: 32
+flow:
+  max_steps: 2
+  warmup_steps: 1
+  precision: fp32
+  ema_decay: 0.99
+baseline_training:
+  max_steps: 2
+  warmup_steps: 1
+  precision: fp32
+  ema_decay: 0.99
+  validation_interval_steps: 1
+sampling:
+  solver: heun
+  steps: 4
+  num_samples: 2

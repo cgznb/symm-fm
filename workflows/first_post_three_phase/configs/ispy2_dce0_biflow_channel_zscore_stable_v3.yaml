@@ -1,0 +1,28 @@
+schema_version: mewm_ispy2_dce0_biflow_rectified_flow_stable_config_v3
+base_config: '@repo/workflows/first_post_three_phase/configs/ispy2_dce0_biflow_data_text_channel_zscore_v2.yaml'
+model:
+  preset: biflownet_original_single_res_ispy2_v1
+training:
+  batch_size: 3
+  accumulate_grad_batches: 1
+  max_epochs: 100
+  precision: bf16-mixed
+  num_workers: 2
+  backbone_learning_rate: 1.0e-05
+  controlnet_learning_rate: 0.0001
+  conditioner_learning_rate: 0.0001
+  text_lora_learning_rate: 1.0e-05
+  min_learning_rate: 1.0e-06
+  warmup_fraction: 0.05
+  weight_decay: 0.05
+  gradient_clip_val: 1.0
+  evaluation_solver_steps: 8
+  early_stopping_patience: 12
+  divergence_reference_metric: 0.504343808
+  divergence_multiplier: 1.5
+  divergence_patience: 2
+runtime:
+  output_root: '@artifacts/ispy2/runs/ispy2_dce0_biflow_channel_zscore_stable_v3'
+  seed: 2026
+  warm_start_checkpoint: '@artifacts/ispy2/runs/ispy2_dce0_biflow_channel_zscore_v2/checkpoints/best-014.ckpt'
+  warm_start_sha256: '@legacy:ispy2:configs/ispy2_dce0_biflow_channel_zscore_stable_v3.yaml:runtime.warm_start_sha256'

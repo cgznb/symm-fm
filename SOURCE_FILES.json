@@ -1,0 +1,1507 @@
+[
+  {
+    "path": "LICENSE",
+    "source": "symm",
+    "source_file": "LICENSE"
+  },
+  {
+    "path": "configs/base.yaml",
+    "source": "symm",
+    "source_file": "configs/base.yaml"
+  },
+  {
+    "path": "configs/early_only.yaml",
+    "source": "symm",
+    "source_file": "configs/early_only.yaml"
+  },
+  {
+    "path": "configs/mewm_all_pairs_5090.yaml",
+    "source": "symm",
+    "source_file": "configs/mewm_all_pairs_5090.yaml"
+  },
+  {
+    "path": "configs/mewm_latent_small_gpu.yaml",
+    "source": "symm",
+    "source_file": "configs/mewm_latent_small_gpu.yaml"
+  },
+  {
+    "path": "configs/mewm_latent_smoke.yaml",
+    "source": "symm",
+    "source_file": "configs/mewm_latent_smoke.yaml"
+  },
+  {
+    "path": "configs/mu_glioma_all_pairs_5090.yaml",
+    "source": "symm",
+    "source_file": "configs/mu_glioma_all_pairs_5090.yaml"
+  },
+  {
+    "path": "configs/mu_glioma_smoke_5090.yaml",
+    "source": "symm",
+    "source_file": "configs/mu_glioma_smoke_5090.yaml"
+  },
+  {
+    "path": "configs/mu_glioma_zscore_ablation_5090.yaml",
+    "source": "symm",
+    "source_file": "configs/mu_glioma_zscore_ablation_5090.yaml"
+  },
+  {
+    "path": "configs/mu_glioma_zscore_attn_40k_5090.yaml",
+    "source": "symm",
+    "source_file": "configs/mu_glioma_zscore_attn_40k_5090.yaml"
+  },
+  {
+    "path": "configs/mu_glioma_zscore_attn_5090.yaml",
+    "source": "symm",
+    "source_file": "configs/mu_glioma_zscore_attn_5090.yaml"
+  },
+  {
+    "path": "configs/mu_glioma_zscore_cfm_40k_5090.yaml",
+    "source": "symm",
+    "source_file": "configs/mu_glioma_zscore_cfm_40k_5090.yaml"
+  },
+  {
+    "path": "configs/mu_glioma_zscore_cfm_5090.yaml",
+    "source": "symm",
+    "source_file": "configs/mu_glioma_zscore_cfm_5090.yaml"
+  },
+  {
+    "path": "configs/mu_glioma_zscore_source_bridge05_cfm_40k_5090.yaml",
+    "source": "symm",
+    "source_file": "configs/mu_glioma_zscore_source_bridge05_cfm_40k_5090.yaml"
+  },
+  {
+    "path": "configs/mu_glioma_zscore_source_bridge05_cfm_5090.yaml",
+    "source": "symm",
+    "source_file": "configs/mu_glioma_zscore_source_bridge05_cfm_5090.yaml"
+  },
+  {
+    "path": "configs/mu_glioma_zscore_source_bridge_cfm_40k_5090.yaml",
+    "source": "symm",
+    "source_file": "configs/mu_glioma_zscore_source_bridge_cfm_40k_5090.yaml"
+  },
+  {
+    "path": "configs/mu_glioma_zscore_source_bridge_cfm_5090.yaml",
+    "source": "symm",
+    "source_file": "configs/mu_glioma_zscore_source_bridge_cfm_5090.yaml"
+  },
+  {
+    "path": "configs/registered_roi32_5090.yaml",
+    "source": "symm",
+    "source_file": "configs/registered_roi32_5090.yaml"
+  },
+  {
+    "path": "configs/small_gpu.yaml",
+    "source": "symm",
+    "source_file": "configs/small_gpu.yaml"
+  },
+  {
+    "path": "configs/smoke.yaml",
+    "source": "symm",
+    "source_file": "configs/smoke.yaml"
+  },
+  {
+    "path": "configs/standard_3d.yaml",
+    "source": "symm",
+    "source_file": "configs/standard_3d.yaml"
+  },
+  {
+    "path": "configs/symmflow_compat.yaml",
+    "source": "symm",
+    "source_file": "configs/symmflow_compat.yaml"
+  },
+  {
+    "path": "docs/third_party_notices.md",
+    "source": "symm",
+    "source_file": "docs/third_party_notices.md"
+  },
+  {
+    "path": "pyproject.toml",
+    "source": "symm",
+    "source_file": "pyproject.toml"
+  },
+  {
+    "path": "scripts/train_registered_roi32.py",
+    "source": "symm",
+    "source_file": "scripts/train_registered_roi32.py"
+  },
+  {
+    "path": "scripts/visualize_mewm_all_pairs.py",
+    "source": "symm",
+    "source_file": "scripts/visualize_mewm_all_pairs.py"
+  },
+  {
+    "path": "scripts/visualize_mu_glioma.py",
+    "source": "symm",
+    "source_file": "scripts/visualize_mu_glioma.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/__init__.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/__init__.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/cli.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/cli.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/config.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/config.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/data/__init__.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/data/__init__.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/data/audit.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/data/audit.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/data/clinical.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/data/clinical.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/data/dicom.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/data/dicom.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/data/manifest.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/data/manifest.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/data/mewm.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/data/mewm.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/data/mewm_latents.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/data/mewm_latents.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/data/phases.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/data/phases.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/data/schema.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/data/schema.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/data/split.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/data/split.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/data/synthetic.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/data/synthetic.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/evaluation/__init__.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/evaluation/__init__.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/evaluation/_validation.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/evaluation/_validation.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/evaluation/aggregate.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/evaluation/aggregate.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/evaluation/autoencoder.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/evaluation/autoencoder.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/evaluation/cohort.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/evaluation/cohort.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/evaluation/diagnostics.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/evaluation/diagnostics.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/evaluation/metrics.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/evaluation/metrics.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/flow/__init__.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/flow/__init__.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/flow/path.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/flow/path.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/flow/solver.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/flow/solver.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/inference/__init__.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/inference/__init__.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/inference/baselines.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/inference/baselines.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/inference/sampler.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/inference/sampler.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/models/__init__.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/models/__init__.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/models/autoencoder.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/models/autoencoder.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/models/baselines.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/models/baselines.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/models/codec.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/models/codec.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/models/conditioning.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/models/conditioning.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/models/mewm_vqgan.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/models/mewm_vqgan.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/models/velocity.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/models/velocity.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/preprocessing/__init__.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/preprocessing/__init__.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/preprocessing/intensity.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/preprocessing/intensity.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/preprocessing/loader.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/preprocessing/loader.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/preprocessing/pipeline.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/preprocessing/pipeline.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/preprocessing/provenance.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/preprocessing/provenance.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/preprocessing/spatial.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/preprocessing/spatial.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/training/__init__.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/training/__init__.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/training/baselines.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/training/baselines.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/training/cache.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/training/cache.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/training/checkpoint.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/training/checkpoint.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/training/contracts.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/training/contracts.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/training/datasets.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/training/datasets.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/training/distributed.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/training/distributed.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/training/ema.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/training/ema.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/training/engine.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/training/engine.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/training/first_post.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/training/first_post.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/training/mewm_import.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/training/mewm_import.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/training/mu_glioma_import.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/training/mu_glioma_import.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/training/provenance.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/training/provenance.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/training/registered_roi32.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/training/registered_roi32.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/training/run.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/training/run.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/training/schema.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/training/schema.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/training/validation.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/training/validation.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/utils/__init__.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/utils/__init__.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/utils/hashing.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/utils/hashing.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/utils/reproducibility.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/utils/reproducibility.py"
+  },
+  {
+    "path": "src/ispy2_symmflow/utils/runtime.py",
+    "source": "symm",
+    "source_file": "src/ispy2_symmflow/utils/runtime.py"
+  },
+  {
+    "path": "tests/data/test_clinical_contract.py",
+    "source": "symm",
+    "source_file": "tests/data/test_clinical_contract.py"
+  },
+  {
+    "path": "tests/data/test_manifest.py",
+    "source": "symm",
+    "source_file": "tests/data/test_manifest.py"
+  },
+  {
+    "path": "tests/data/test_mewm.py",
+    "source": "symm",
+    "source_file": "tests/data/test_mewm.py"
+  },
+  {
+    "path": "tests/data/test_phases.py",
+    "source": "symm",
+    "source_file": "tests/data/test_phases.py"
+  },
+  {
+    "path": "tests/data/test_split_clinical_audit.py",
+    "source": "symm",
+    "source_file": "tests/data/test_split_clinical_audit.py"
+  },
+  {
+    "path": "tests/preprocessing/test_pipeline.py",
+    "source": "symm",
+    "source_file": "tests/preprocessing/test_pipeline.py"
+  },
+  {
+    "path": "tests/preprocessing/test_spatial.py",
+    "source": "symm",
+    "source_file": "tests/preprocessing/test_spatial.py"
+  },
+  {
+    "path": "tests/test_aggregate.py",
+    "source": "symm",
+    "source_file": "tests/test_aggregate.py"
+  },
+  {
+    "path": "tests/test_autoencoder.py",
+    "source": "symm",
+    "source_file": "tests/test_autoencoder.py"
+  },
+  {
+    "path": "tests/test_baseline_cli.py",
+    "source": "symm",
+    "source_file": "tests/test_baseline_cli.py"
+  },
+  {
+    "path": "tests/test_baseline_inference.py",
+    "source": "symm",
+    "source_file": "tests/test_baseline_inference.py"
+  },
+  {
+    "path": "tests/test_baseline_training.py",
+    "source": "symm",
+    "source_file": "tests/test_baseline_training.py"
+  },
+  {
+    "path": "tests/test_baseline_training_run.py",
+    "source": "symm",
+    "source_file": "tests/test_baseline_training_run.py"
+  },
+  {
+    "path": "tests/test_baselines.py",
+    "source": "symm",
+    "source_file": "tests/test_baselines.py"
+  },
+  {
+    "path": "tests/test_cache.py",
+    "source": "symm",
+    "source_file": "tests/test_cache.py"
+  },
+  {
+    "path": "tests/test_checkpoint.py",
+    "source": "symm",
+    "source_file": "tests/test_checkpoint.py"
+  },
+  {
+    "path": "tests/test_cli.py",
+    "source": "symm",
+    "source_file": "tests/test_cli.py"
+  },
+  {
+    "path": "tests/test_condition_schema_fit.py",
+    "source": "symm",
+    "source_file": "tests/test_condition_schema_fit.py"
+  },
+  {
+    "path": "tests/test_conditioning.py",
+    "source": "symm",
+    "source_file": "tests/test_conditioning.py"
+  },
+  {
+    "path": "tests/test_diagnostics.py",
+    "source": "symm",
+    "source_file": "tests/test_diagnostics.py"
+  },
+  {
+    "path": "tests/test_distributed.py",
+    "source": "symm",
+    "source_file": "tests/test_distributed.py"
+  },
+  {
+    "path": "tests/test_evaluation_autoencoder.py",
+    "source": "symm",
+    "source_file": "tests/test_evaluation_autoencoder.py"
+  },
+  {
+    "path": "tests/test_evaluation_cohort.py",
+    "source": "symm",
+    "source_file": "tests/test_evaluation_cohort.py"
+  },
+  {
+    "path": "tests/test_flow_path.py",
+    "source": "symm",
+    "source_file": "tests/test_flow_path.py"
+  },
+  {
+    "path": "tests/test_metrics.py",
+    "source": "symm",
+    "source_file": "tests/test_metrics.py"
+  },
+  {
+    "path": "tests/test_mewm_import.py",
+    "source": "symm",
+    "source_file": "tests/test_mewm_import.py"
+  },
+  {
+    "path": "tests/test_mewm_vqgan.py",
+    "source": "symm",
+    "source_file": "tests/test_mewm_vqgan.py"
+  },
+  {
+    "path": "tests/test_mu_glioma_import.py",
+    "source": "symm",
+    "source_file": "tests/test_mu_glioma_import.py"
+  },
+  {
+    "path": "tests/test_sampler.py",
+    "source": "symm",
+    "source_file": "tests/test_sampler.py"
+  },
+  {
+    "path": "tests/test_solver.py",
+    "source": "symm",
+    "source_file": "tests/test_solver.py"
+  },
+  {
+    "path": "tests/test_synthetic.py",
+    "source": "symm",
+    "source_file": "tests/test_synthetic.py"
+  },
+  {
+    "path": "tests/test_training.py",
+    "source": "symm",
+    "source_file": "tests/test_training.py"
+  },
+  {
+    "path": "tests/test_training_contracts.py",
+    "source": "symm",
+    "source_file": "tests/test_training_contracts.py"
+  },
+  {
+    "path": "tests/test_training_datasets.py",
+    "source": "symm",
+    "source_file": "tests/test_training_datasets.py"
+  },
+  {
+    "path": "tests/test_training_run.py",
+    "source": "symm",
+    "source_file": "tests/test_training_run.py"
+  },
+  {
+    "path": "tests/test_validation.py",
+    "source": "symm",
+    "source_file": "tests/test_validation.py"
+  },
+  {
+    "path": "tests/test_velocity_model.py",
+    "source": "symm",
+    "source_file": "tests/test_velocity_model.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/LICENSE.md",
+    "source": "ispy2",
+    "source_file": "LICENSE.md"
+  },
+  {
+    "path": "workflows/first_post_three_phase/configs/first_post_world_compare_v1.yaml",
+    "source": "ispy2",
+    "source_file": "configs/first_post_world_compare_v1.yaml"
+  },
+  {
+    "path": "workflows/first_post_three_phase/configs/ispy2_dce0_biflow_channel_zscore_stable_v3.yaml",
+    "source": "ispy2",
+    "source_file": "configs/ispy2_dce0_biflow_channel_zscore_stable_v3.yaml"
+  },
+  {
+    "path": "workflows/first_post_three_phase/configs/ispy2_dce0_biflow_channel_zscore_v2.yaml",
+    "source": "ispy2",
+    "source_file": "configs/ispy2_dce0_biflow_channel_zscore_v2.yaml"
+  },
+  {
+    "path": "workflows/first_post_three_phase/configs/ispy2_dce0_biflow_data_text_channel_zscore_v2.yaml",
+    "source": "ispy2",
+    "source_file": "configs/ispy2_dce0_biflow_data_text_channel_zscore_v2.yaml"
+  },
+  {
+    "path": "workflows/first_post_three_phase/configs/ispy2_dce0_biflow_data_text_v1.yaml",
+    "source": "ispy2",
+    "source_file": "configs/ispy2_dce0_biflow_data_text_v1.yaml"
+  },
+  {
+    "path": "workflows/first_post_three_phase/configs/ispy2_dce0_biflow_original_resume_no_early_stop_v2.yaml",
+    "source": "ispy2",
+    "source_file": "configs/ispy2_dce0_biflow_original_resume_no_early_stop_v2.yaml"
+  },
+  {
+    "path": "workflows/first_post_three_phase/configs/ispy2_dce0_biflow_original_v1.yaml",
+    "source": "ispy2",
+    "source_file": "configs/ispy2_dce0_biflow_original_v1.yaml"
+  },
+  {
+    "path": "workflows/first_post_three_phase/configs/source_bridge_fp32_bridge025.yaml",
+    "source": "ispy2",
+    "source_file": "configs/source_bridge_fp32_bridge025.yaml"
+  },
+  {
+    "path": "workflows/first_post_three_phase/configs/source_bridge_fp32_bridge050.yaml",
+    "source": "ispy2",
+    "source_file": "configs/source_bridge_fp32_bridge050.yaml"
+  },
+  {
+    "path": "workflows/first_post_three_phase/configs/source_bridge_pilot_bridge025.yaml",
+    "source": "ispy2",
+    "source_file": "configs/source_bridge_pilot_bridge025.yaml"
+  },
+  {
+    "path": "workflows/first_post_three_phase/configs/source_bridge_pilot_bridge050.yaml",
+    "source": "ispy2",
+    "source_file": "configs/source_bridge_pilot_bridge050.yaml"
+  },
+  {
+    "path": "workflows/first_post_three_phase/configs/source_bridge_pilot_pure_noise.yaml",
+    "source": "ispy2",
+    "source_file": "configs/source_bridge_pilot_pure_noise.yaml"
+  },
+  {
+    "path": "workflows/first_post_three_phase/configs/three_phase_symmflow_all_pairs_t0_v2.yaml",
+    "source": "ispy2",
+    "source_file": "configs/three_phase_symmflow_all_pairs_t0_v2.yaml"
+  },
+  {
+    "path": "workflows/first_post_three_phase/configs/three_phase_symmflow_all_pairs_v1.yaml",
+    "source": "ispy2",
+    "source_file": "configs/three_phase_symmflow_all_pairs_v1.yaml"
+  },
+  {
+    "path": "workflows/first_post_three_phase/configs/three_phase_symmflow_pilot_v1.yaml",
+    "source": "ispy2",
+    "source_file": "configs/three_phase_symmflow_pilot_v1.yaml"
+  },
+  {
+    "path": "workflows/first_post_three_phase/configs/three_phase_symmflow_pilot_v2.yaml",
+    "source": "ispy2",
+    "source_file": "configs/three_phase_symmflow_pilot_v2.yaml"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/__init__.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/__init__.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/backend.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/backend.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/cache.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/cache.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/checkpoint.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/checkpoint.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/conditioning.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/conditioning.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/config.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/config.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/contracts.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/contracts.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/ct_denoiser.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/ct_denoiser.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/data.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/data.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/diffusion.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/diffusion.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/first_post_world_data.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/first_post_world_data.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/first_post_world_evaluation.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/first_post_world_evaluation.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/first_post_world_models.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/first_post_world_models.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/first_post_world_prepare.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/first_post_world_prepare.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/first_post_world_training.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/first_post_world_training.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/inference.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/inference.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/ispy2_biflow_backbone.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/ispy2_biflow_backbone.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/ispy2_biflow_cohort_evaluation.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/ispy2_biflow_cohort_evaluation.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/ispy2_biflow_config.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/ispy2_biflow_config.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/ispy2_biflow_data.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/ispy2_biflow_data.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/ispy2_biflow_latent_contract.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/ispy2_biflow_latent_contract.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/ispy2_biflow_preflight.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/ispy2_biflow_preflight.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/ispy2_biflow_training.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/ispy2_biflow_training.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/ispy2_biflow_visualization.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/ispy2_biflow_visualization.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/ispy2_biflow_workflow.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/ispy2_biflow_workflow.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/ispy2_biflow_world_model.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/ispy2_biflow_world_model.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/ispy2_dce0_world_config.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/ispy2_dce0_world_config.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/ispy2_dce0_world_data.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/ispy2_dce0_world_data.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/ispy2_dce0_world_latents.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/ispy2_dce0_world_latents.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/latent_pcr_config.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/latent_pcr_config.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/latent_statistics.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/latent_statistics.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/latent_world_v4_config.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/latent_world_v4_config.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/latent_world_v5_codebook.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/latent_world_v5_codebook.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/latent_world_v5_config.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/latent_world_v5_config.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/manifest.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/manifest.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/metrics.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/metrics.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/mu_glioma_world_model.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/mu_glioma_world_model.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/paper_attenuation.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/paper_attenuation.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/paper_ccl.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/paper_ccl.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/paper_checkpoint.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/paper_checkpoint.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/paper_conditioning.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/paper_conditioning.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/paper_contracts.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/paper_contracts.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/paper_denoiser.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/paper_denoiser.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/paper_diffusion.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/paper_diffusion.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/paper_warm_start.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/paper_warm_start.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/perceptual.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/perceptual.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/preflight.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/preflight.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/preprocessing.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/preprocessing.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/registered_large_checkpoint.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/registered_large_checkpoint.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/registered_x0_checkpoint.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/registered_x0_checkpoint.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/segmenter.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/segmenter.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/source_bridge.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/source_bridge.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/source_bridge_evaluation.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/source_bridge_evaluation.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/source_bridge_workflow.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/source_bridge_workflow.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/three_phase_all_pairs_data.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/three_phase_all_pairs_data.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/three_phase_all_pairs_training.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/three_phase_all_pairs_training.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/three_phase_pilot_data.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/three_phase_pilot_data.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/three_phase_pilot_training.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/three_phase_pilot_training.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/three_phase_preparation.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/three_phase_preparation.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/three_phase_symmflow.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/three_phase_symmflow.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/vqgan.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/vqgan.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/mewm_ispy2/workflows.py",
+    "source": "ispy2",
+    "source_file": "mewm_ispy2/workflows.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/scripts/audit_three_phase_inference.py",
+    "source": "ispy2",
+    "source_file": "scripts/audit_three_phase_inference.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/scripts/compare_ispy2_biflow_euler_steps.py",
+    "source": "ispy2",
+    "source_file": "scripts/compare_ispy2_biflow_euler_steps.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/scripts/evaluate_ispy2_biflow_cohort.py",
+    "source": "ispy2",
+    "source_file": "scripts/evaluate_ispy2_biflow_cohort.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/scripts/prepare_ispy2_biflow_latents.py",
+    "source": "ispy2",
+    "source_file": "scripts/prepare_ispy2_biflow_latents.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/scripts/profile_three_phase_preparation.py",
+    "source": "ispy2",
+    "source_file": "scripts/profile_three_phase_preparation.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/scripts/render_ispy2_biflow_cohort_clean.py",
+    "source": "ispy2",
+    "source_file": "scripts/render_ispy2_biflow_cohort_clean.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/scripts/run_first_post_comparison.py",
+    "source": "ispy2",
+    "source_file": "scripts/run_first_post_comparison.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/scripts/run_three_phase_symmflow.py",
+    "source": "ispy2",
+    "source_file": "scripts/run_three_phase_symmflow.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/scripts/run_three_phase_symmflow_pilot.py",
+    "source": "ispy2",
+    "source_file": "scripts/run_three_phase_symmflow_pilot.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/scripts/summarize_ispy2_biflow_adjacent.py",
+    "source": "ispy2",
+    "source_file": "scripts/summarize_ispy2_biflow_adjacent.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/scripts/verify_three_phase_t0_inventory.py",
+    "source": "ispy2",
+    "source_file": "scripts/verify_three_phase_t0_inventory.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/scripts/visualize_ispy2_biflow_samples.py",
+    "source": "ispy2",
+    "source_file": "scripts/visualize_ispy2_biflow_samples.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/tests/test_first_post_world.py",
+    "source": "ispy2",
+    "source_file": "tests/test_first_post_world.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/tests/test_ispy2_biflow.py",
+    "source": "ispy2",
+    "source_file": "tests/test_ispy2_biflow.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/tests/test_ispy2_biflow_cohort_evaluation.py",
+    "source": "ispy2",
+    "source_file": "tests/test_ispy2_biflow_cohort_evaluation.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/tests/test_ispy2_biflow_config.py",
+    "source": "ispy2",
+    "source_file": "tests/test_ispy2_biflow_config.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/tests/test_ispy2_biflow_latent_contract.py",
+    "source": "ispy2",
+    "source_file": "tests/test_ispy2_biflow_latent_contract.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/tests/test_ispy2_biflow_visualization.py",
+    "source": "ispy2",
+    "source_file": "tests/test_ispy2_biflow_visualization.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/tests/test_source_bridge.py",
+    "source": "ispy2",
+    "source_file": "tests/test_source_bridge.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/tests/test_source_bridge_numerics.py",
+    "source": "ispy2",
+    "source_file": "tests/test_source_bridge_numerics.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/tests/test_source_bridge_queue.py",
+    "source": "ispy2",
+    "source_file": "tests/test_source_bridge_queue.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/tests/test_three_phase_all_pairs.py",
+    "source": "ispy2",
+    "source_file": "tests/test_three_phase_all_pairs.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/tests/test_three_phase_preparation.py",
+    "source": "ispy2",
+    "source_file": "tests/test_three_phase_preparation.py"
+  },
+  {
+    "path": "workflows/first_post_three_phase/tests/test_three_phase_symmflow.py",
+    "source": "ispy2",
+    "source_file": "tests/test_three_phase_symmflow.py"
+  },
+  {
+    "path": "workflows/roi32/LICENSE.md",
+    "source": "mewm",
+    "source_file": "LICENSE.md"
+  },
+  {
+    "path": "workflows/roi32/configs/ispy2_first_post_all_visits_90_10_v1.yaml",
+    "source": "mewm",
+    "source_file": "configs/ispy2_first_post_all_visits_90_10_v1.yaml"
+  },
+  {
+    "path": "workflows/roi32/configs/ispy2_first_post_mamamia_segmentation_v1.yaml",
+    "source": "mewm",
+    "source_file": "configs/ispy2_first_post_mamamia_segmentation_v1.yaml"
+  },
+  {
+    "path": "workflows/roi32/configs/ispy2_first_post_t0_fallback_v2.yaml",
+    "source": "mewm",
+    "source_file": "configs/ispy2_first_post_t0_fallback_v2.yaml"
+  },
+  {
+    "path": "workflows/roi32/configs/ispy2_first_post_unregistered_v1.yaml",
+    "source": "mewm",
+    "source_file": "configs/ispy2_first_post_unregistered_v1.yaml"
+  },
+  {
+    "path": "workflows/roi32/configs/registered_dce0_roi32_firstpostmask_v1.yaml",
+    "source": "mewm",
+    "source_file": "configs/registered_dce0_roi32_firstpostmask_v1.yaml"
+  },
+  {
+    "path": "workflows/roi32/mewm_ispy2/__init__.py",
+    "source": "mewm",
+    "source_file": "mewm_ispy2/__init__.py"
+  },
+  {
+    "path": "workflows/roi32/mewm_ispy2/contracts.py",
+    "source": "mewm",
+    "source_file": "mewm_ispy2/contracts.py"
+  },
+  {
+    "path": "workflows/roi32/mewm_ispy2/first_post_data.py",
+    "source": "mewm",
+    "source_file": "mewm_ispy2/first_post_data.py"
+  },
+  {
+    "path": "workflows/roi32/mewm_ispy2/first_post_segmentation.py",
+    "source": "mewm",
+    "source_file": "mewm_ispy2/first_post_segmentation.py"
+  },
+  {
+    "path": "workflows/roi32/mewm_ispy2/first_post_segmentation_acceleration.py",
+    "source": "mewm",
+    "source_file": "mewm_ispy2/first_post_segmentation_acceleration.py"
+  },
+  {
+    "path": "workflows/roi32/mewm_ispy2/first_post_segmentation_parallel.py",
+    "source": "mewm",
+    "source_file": "mewm_ispy2/first_post_segmentation_parallel.py"
+  },
+  {
+    "path": "workflows/roi32/mewm_ispy2/first_post_tumor_crops.py",
+    "source": "mewm",
+    "source_file": "mewm_ispy2/first_post_tumor_crops.py"
+  },
+  {
+    "path": "workflows/roi32/mewm_ispy2/first_post_vqgan.py",
+    "source": "mewm",
+    "source_file": "mewm_ispy2/first_post_vqgan.py"
+  },
+  {
+    "path": "workflows/roi32/mewm_ispy2/first_post_vqgan_performance.py",
+    "source": "mewm",
+    "source_file": "mewm_ispy2/first_post_vqgan_performance.py"
+  },
+  {
+    "path": "workflows/roi32/mewm_ispy2/perceptual.py",
+    "source": "mewm",
+    "source_file": "mewm_ispy2/perceptual.py"
+  },
+  {
+    "path": "workflows/roi32/mewm_ispy2/preprocessing.py",
+    "source": "mewm",
+    "source_file": "mewm_ispy2/preprocessing.py"
+  },
+  {
+    "path": "workflows/roi32/mewm_ispy2/registered_roi32_data.py",
+    "source": "mewm",
+    "source_file": "mewm_ispy2/registered_roi32_data.py"
+  },
+  {
+    "path": "workflows/roi32/mewm_ispy2/registered_roi32_evaluation.py",
+    "source": "mewm",
+    "source_file": "mewm_ispy2/registered_roi32_evaluation.py"
+  },
+  {
+    "path": "workflows/roi32/mewm_ispy2/registered_roi32_fm.py",
+    "source": "mewm",
+    "source_file": "mewm_ispy2/registered_roi32_fm.py"
+  },
+  {
+    "path": "workflows/roi32/mewm_ispy2/registered_roi32_followup.py",
+    "source": "mewm",
+    "source_file": "mewm_ispy2/registered_roi32_followup.py"
+  },
+  {
+    "path": "workflows/roi32/mewm_ispy2/registered_roi32_latents.py",
+    "source": "mewm",
+    "source_file": "mewm_ispy2/registered_roi32_latents.py"
+  },
+  {
+    "path": "workflows/roi32/mewm_ispy2/registered_roi32_runtime.py",
+    "source": "mewm",
+    "source_file": "mewm_ispy2/registered_roi32_runtime.py"
+  },
+  {
+    "path": "workflows/roi32/mewm_ispy2/registered_roi32_smoke.py",
+    "source": "mewm",
+    "source_file": "mewm_ispy2/registered_roi32_smoke.py"
+  },
+  {
+    "path": "workflows/roi32/mewm_ispy2/registered_roi32_vq.py",
+    "source": "mewm",
+    "source_file": "mewm_ispy2/registered_roi32_vq.py"
+  },
+  {
+    "path": "workflows/roi32/mewm_ispy2/vqgan.py",
+    "source": "mewm",
+    "source_file": "mewm_ispy2/vqgan.py"
+  },
+  {
+    "path": "workflows/roi32/scripts/audit_first_post_t0_fallback.py",
+    "source": "mewm",
+    "source_file": "scripts/audit_first_post_t0_fallback.py"
+  },
+  {
+    "path": "workflows/roi32/scripts/benchmark_first_post_segmentation_batches.py",
+    "source": "mewm",
+    "source_file": "scripts/benchmark_first_post_segmentation_batches.py"
+  },
+  {
+    "path": "workflows/roi32/scripts/benchmark_first_post_segmentation_parallel.py",
+    "source": "mewm",
+    "source_file": "scripts/benchmark_first_post_segmentation_parallel.py"
+  },
+  {
+    "path": "workflows/roi32/scripts/launch_first_post_segmentation.py",
+    "source": "mewm",
+    "source_file": "scripts/launch_first_post_segmentation.py"
+  },
+  {
+    "path": "workflows/roi32/scripts/launch_first_post_vqgan.py",
+    "source": "mewm",
+    "source_file": "scripts/launch_first_post_vqgan.py"
+  },
+  {
+    "path": "workflows/roi32/scripts/prepare_first_post_t0_overrides.py",
+    "source": "mewm",
+    "source_file": "scripts/prepare_first_post_t0_overrides.py"
+  },
+  {
+    "path": "workflows/roi32/scripts/preview_registered_roi32_vq.py",
+    "source": "mewm",
+    "source_file": "scripts/preview_registered_roi32_vq.py"
+  },
+  {
+    "path": "workflows/roi32/scripts/roi32_displacement_worker.py",
+    "source": "mewm",
+    "source_file": "scripts/roi32_displacement_worker.py"
+  },
+  {
+    "path": "workflows/roi32/scripts/run_registered_roi32.py",
+    "source": "mewm",
+    "source_file": "scripts/run_registered_roi32.py"
+  },
+  {
+    "path": "workflows/roi32/scripts/smoke_first_post_segmentation.py",
+    "source": "mewm",
+    "source_file": "scripts/smoke_first_post_segmentation.py"
+  },
+  {
+    "path": "workflows/roi32/scripts/verify_first_post_t0_samples.py",
+    "source": "mewm",
+    "source_file": "scripts/verify_first_post_t0_samples.py"
+  },
+  {
+    "path": "workflows/roi32/scripts/verify_first_post_tumor_crops.py",
+    "source": "mewm",
+    "source_file": "scripts/verify_first_post_tumor_crops.py"
+  },
+  {
+    "path": "workflows/roi32/tests/test_first_post_segmentation.py",
+    "source": "mewm",
+    "source_file": "tests/test_first_post_segmentation.py"
+  },
+  {
+    "path": "workflows/roi32/tests/test_first_post_segmentation_acceleration.py",
+    "source": "mewm",
+    "source_file": "tests/test_first_post_segmentation_acceleration.py"
+  },
+  {
+    "path": "workflows/roi32/tests/test_first_post_segmentation_parallel.py",
+    "source": "mewm",
+    "source_file": "tests/test_first_post_segmentation_parallel.py"
+  },
+  {
+    "path": "workflows/roi32/tests/test_first_post_t0_crop.py",
+    "source": "mewm",
+    "source_file": "tests/test_first_post_t0_crop.py"
+  },
+  {
+    "path": "workflows/roi32/tests/test_first_post_training.py",
+    "source": "mewm",
+    "source_file": "tests/test_first_post_training.py"
+  },
+  {
+    "path": "workflows/roi32/tests/test_registered_roi32.py",
+    "source": "mewm",
+    "source_file": "tests/test_registered_roi32.py"
+  },
+  {
+    "path": "support/pillar/configs/first_post_pcr_v1.yaml",
+    "source": "pillar",
+    "source_file": "configs/first_post_pcr_v1.yaml"
+  },
+  {
+    "path": "support/pillar/src/__init__.py",
+    "source": "pillar",
+    "source_file": "src/__init__.py"
+  },
+  {
+    "path": "support/pillar/src/data.py",
+    "source": "pillar",
+    "source_file": "src/data.py"
+  },
+  {
+    "path": "support/pillar/src/first_post_pcr_data.py",
+    "source": "pillar",
+    "source_file": "src/first_post_pcr_data.py"
+  },
+  {
+    "path": "support/pillar/src/pillar.py",
+    "source": "pillar",
+    "source_file": "src/pillar.py"
+  },
+  {
+    "path": "support/pillar/src/tabular.py",
+    "source": "pillar",
+    "source_file": "src/tabular.py"
+  },
+  {
+    "path": "support/ispy2_codec/LICENSE.md",
+    "source": "ispy2_codec",
+    "source_file": "LICENSE.md"
+  },
+  {
+    "path": "support/ispy2_codec/configs/ispy2_registered_strict_a_vqgan_large_v1.yaml",
+    "source": "ispy2_codec",
+    "source_file": "configs/ispy2_registered_strict_a_vqgan_large_v1.yaml"
+  },
+  {
+    "path": "support/mu_codec/LICENSE.md",
+    "source": "mu_codec",
+    "source_file": "LICENSE.md"
+  },
+  {
+    "path": "support/mu_codec/configs/mu_glioma_post_vqgan_shared_h16_d160_v1.yaml",
+    "source": "mu_codec",
+    "source_file": "configs/mu_glioma_post_vqgan_shared_h16_d160_v1.yaml"
+  },
+  {
+    "path": "support/registration/LICENSE",
+    "source": "registration",
+    "source_file": "LICENSE"
+  },
+  {
+    "path": "support/registration/src/ispy2_registration/__init__.py",
+    "source": "registration",
+    "source_file": "src/ispy2_registration/__init__.py"
+  },
+  {
+    "path": "support/registration/src/ispy2_registration/config.py",
+    "source": "registration",
+    "source_file": "src/ispy2_registration/config.py"
+  },
+  {
+    "path": "support/registration/src/ispy2_registration/fallback_visualization.py",
+    "source": "registration",
+    "source_file": "src/ispy2_registration/fallback_visualization.py"
+  },
+  {
+    "path": "support/registration/src/ispy2_registration/geometry.py",
+    "source": "registration",
+    "source_file": "src/ispy2_registration/geometry.py"
+  },
+  {
+    "path": "support/registration/src/ispy2_registration/io.py",
+    "source": "registration",
+    "source_file": "src/ispy2_registration/io.py"
+  },
+  {
+    "path": "support/registration/src/ispy2_registration/manifest.py",
+    "source": "registration",
+    "source_file": "src/ispy2_registration/manifest.py"
+  },
+  {
+    "path": "support/registration/src/ispy2_registration/models.py",
+    "source": "registration",
+    "source_file": "src/ispy2_registration/models.py"
+  },
+  {
+    "path": "support/registration/src/ispy2_registration/preprocess.py",
+    "source": "registration",
+    "source_file": "src/ispy2_registration/preprocess.py"
+  },
+  {
+    "path": "support/registration/src/ispy2_registration/qc.py",
+    "source": "registration",
+    "source_file": "src/ispy2_registration/qc.py"
+  },
+  {
+    "path": "support/registration/src/ispy2_registration/transforms.py",
+    "source": "registration",
+    "source_file": "src/ispy2_registration/transforms.py"
+  },
+  {
+    "path": "support/pillar/scripts/__init__.py",
+    "source": "pillar",
+    "source_file": "scripts/__init__.py"
+  },
+  {
+    "path": "support/pillar/scripts/evaluate_first_post_pcr.py",
+    "source": "pillar",
+    "source_file": "scripts/evaluate_first_post_pcr.py"
+  },
+  {
+    "path": "support/pillar/scripts/run_first_post_pcr.py",
+    "source": "pillar",
+    "source_file": "scripts/run_first_post_pcr.py"
+  },
+  {
+    "path": "support/pillar/scripts/run_full978_anti_overfit.py",
+    "source": "pillar",
+    "source_file": "scripts/run_full978_anti_overfit.py"
+  },
+  {
+    "path": "support/pillar/scripts/run_full978_independent_cv.py",
+    "source": "pillar",
+    "source_file": "scripts/run_full978_independent_cv.py"
+  },
+  {
+    "path": "support/pillar/src/metrics.py",
+    "source": "pillar",
+    "source_file": "src/metrics.py"
+  },
+  {
+    "path": "support/pillar/src/tdn.py",
+    "source": "pillar",
+    "source_file": "src/tdn.py"
+  },
+  {
+    "path": "support/pillar/src/temporal.py",
+    "source": "pillar",
+    "source_file": "src/temporal.py"
+  }
+]

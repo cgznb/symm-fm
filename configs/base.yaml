@@ -1,0 +1,144 @@
+project:
+  name: ispy2-symmflow3d
+  seed: 20260908
+  output_dir: outputs
+data:
+  root: '@external/DATASETS/manifest-1782893659073'
+  metadata_csv: '@external/DATASETS/manifest-1782893659073/metadata.csv'
+  clinical_path: null
+  prepared_dir: outputs/prepared
+  time_pair:
+  - T0
+  - T1
+  phase_channels:
+  - pre
+  - early
+  - late
+  allow_early_only: false
+  split_fractions:
+  - 0.8
+  - 0.1
+  - 0.1
+  split_seed: 20260908
+  target_spacing_mm:
+  - 2.5
+  - 1.25
+  - 1.25
+  spatial_size:
+  - 64
+  - 128
+  - 128
+  orientation: SAR
+  registration: none
+  relative_dates_verified: false
+  derived_phase_convention_verified: false
+  intensity_lower_percentile: 0.5
+  intensity_upper_percentile: 99.5
+conditions:
+  token_dim: 256
+  categorical:
+    treatment_arm: []
+    hr_status:
+    - negative
+    - positive
+    her2_status:
+    - negative
+    - positive
+    mammaprint:
+    - low
+    - high
+    stage_i:
+    - T0
+    - T1
+    - T2
+    stage_j:
+    - T1
+    - T2
+    - T3
+    interval_missing:
+    - 'no'
+    - 'yes'
+    interval_source:
+    - verified_relative_dicom_study_date
+    - stage_only_unverified_deidentified_date
+  numeric:
+  - age
+  - delta_days
+autoencoder:
+  spatial_dims: 3
+  in_channels: 3
+  out_channels: 3
+  channels:
+  - 64
+  - 128
+  - 256
+  num_res_blocks: 2
+  attention_levels:
+  - false
+  - false
+  - true
+  latent_channels: 8
+  norm_num_groups: 32
+  learning_rate: 0.0001
+  weight_decay: 0.01
+  kl_weight: 1.0e-06
+  gradient_weight: 0.0
+  gradient_clip_norm: 1.0
+  warmup_steps: 0
+  max_epochs: 100
+  validation_interval_epochs: 1
+velocity:
+  spatial_dims: 3
+  latent_channels: 8
+  channels:
+  - 128
+  - 256
+  - 384
+  num_res_blocks: 2
+  attention_levels:
+  - false
+  - true
+  - true
+  num_head_channels:
+  - 0
+  - 64
+  - 64
+  norm_num_groups: 32
+  with_conditioning: true
+  cross_attention_dim: 256
+flow:
+  sigma_min: 0.0
+  loss_weight_x: 1.0
+  loss_weight_y: 1.0
+  learning_rate: 0.0001
+  weight_decay: 0.01
+  max_steps: 100000
+  warmup_steps: 1000
+  gradient_clip_norm: 1.0
+  gradient_accumulation: 1
+  ema_decay: 0.9999
+  precision: bf16
+  validation_interval_steps: 1000
+  validation_repeats: 1
+  validation_seed: 1729
+baseline_training:
+  learning_rate: 0.0001
+  weight_decay: 0.01
+  max_steps: 100000
+  warmup_steps: 1000
+  gradient_clip_norm: 1.0
+  gradient_accumulation: 1
+  ema_decay: 0.9999
+  precision: bf16
+  deterministic_loss: mse
+  validation_interval_steps: 1000
+  validation_seed: 2718
+sampling:
+  solver: heun
+  steps: 25
+  num_samples: 8
+  seed: 20260908
+evaluation:
+  data_range: 2.0
+  foreground_threshold: -0.95
+  bootstrap_samples: 1000

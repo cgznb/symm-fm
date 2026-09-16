@@ -1,0 +1,64 @@
+data:
+  backend: registered_t0
+  bundle_json: '@workspace/MAM/MOTFM-tumor-first/runs/registered_strict_a_z96_target_oracle/data_bundle/bundle.json'
+  phase_manifest_csv: '@data/manifest-1781750940386/ISPY2/processed_ispy2_world_phase3_scan_phase_aligned_multires_registered_to_T0/manifest/ispy2_breastdcedl_registered_to_T0_manifest.csv'
+  cache_dir: '@artifacts/mewm/runs/cache/registered_strict_a_z96'
+  roi_cache_dir: '@workspace/MAM/MOTFM-tumor-first/runs/registered_strict_a_z96_target_oracle/roi_cache'
+  output_shape_zyx:
+  - 96
+  - 256
+  - 256
+  model_conditions:
+  - source_dce0
+  - source_mask
+  - action_text
+  - clinical_text
+  - delta_days
+  - stage_id
+diffusion:
+  denoiser_architecture: film_unet3d_v1
+  input_channels: 17
+  semantic_channels: 0
+  prediction_type: epsilon
+  samples_per_transition: 8
+  timesteps: 200
+  sampler: ancestral_ddpm
+  latent_contract: continuous_codebook_minmax_v1
+  ema_decay: 0.995
+runtime:
+  smoke: false
+  output_dir: '@artifacts/mewm/runs/registered_strict_a_mewm_paper_large_v1'
+  seed: 2026
+models:
+  vqgan:
+    image_channels: 1
+    hidden_channels: 16
+    embedding_dim: 8
+    n_codes: 16384
+    downsample_factor: 4
+    bottleneck_blocks: 1
+    num_groups: 32
+    ct_source_repo: MrGiovanni/DiffTumor
+    ct_source_revision: '@legacy:ispy2_codec:configs/ispy2_registered_strict_a_vqgan_large_v1.yaml:models.vqgan.ct_source_revision'
+  medgemma:
+    model_id: google/medgemma-4b-it
+    revision: '@legacy:ispy2_codec:configs/ispy2_registered_strict_a_vqgan_large_v1.yaml:models.medgemma.revision'
+    quantization: nf4
+    lora_targets:
+    - q_proj
+    - v_proj
+  segmenter:
+    architecture: DynUNet
+    image_channels: 1
+vqgan_training:
+  generator_learning_rate: 9.375e-06
+  discriminator_learning_rate: 4.6875e-06
+  batch_size: 1
+  precision: 16-mixed
+  gradient_clip_val: 1.0
+  adversarial_always_on: true
+  image_gan_weight: 0.1
+  volume_gan_weight: 0.1
+  feature_matching_weight: 1.0
+  early_stopping_patience: 16
+  init_mri_checkpoint_sha256: '@legacy:ispy2_codec:configs/ispy2_registered_strict_a_vqgan_large_v1.yaml:vqgan_training.init_mri_checkpoint_sha256'

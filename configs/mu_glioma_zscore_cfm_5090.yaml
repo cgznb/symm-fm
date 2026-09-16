@@ -1,0 +1,18 @@
+extends: mu_glioma_zscore_ablation_5090.yaml
+project:
+  name: ispy2-symmflow3d-mu-glioma-zscore-source-clamped-cfm
+  output_dir: outputs/mu_glioma_zscore_cfm_5090
+baseline_training:
+  batch_size: 1
+  learning_rate: 0.0001
+  weight_decay: 0.05
+  max_steps: 10000
+  warmup_steps: 500
+  gradient_clip_norm: 1.0
+  gradient_accumulation: 4
+  ema_decay: 0.999
+  precision: bf16
+  deterministic_loss: mse
+  validation_interval_steps: 500
+  validation_seed: 20260909
+  log_interval_steps: 10

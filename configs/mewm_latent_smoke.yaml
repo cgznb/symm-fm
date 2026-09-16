@@ -1,0 +1,89 @@
+extends: base.yaml
+project:
+  output_dir: outputs/mewm_latent_smoke
+  num_workers: 0
+data:
+  root: '@external/DATASETS/ispy2_mewm_paired_v2'
+  time_pair:
+  - T0
+  - T1
+  phase_channels:
+  - dce0
+  spatial_size:
+  - 96
+  - 256
+  - 256
+  target_spacing_mm:
+  - 2.0
+  - 0.7032
+  - 0.7032
+  latent_backend: mewm_continuous_prequantization_v2
+  external_coordinate_frame: t0_fixed_registered_local_v1
+conditions:
+  token_dim: 64
+  categorical:
+    treatment_arm: []
+    hr_status:
+    - '0'
+    - '1'
+    her2_status:
+    - '0'
+    - '1'
+    mammaprint:
+    - '0'
+    - '1'
+    menopausal_status: []
+    stage_i:
+    - T0
+    stage_j:
+    - T1
+    interval_missing:
+    - 'no'
+    - 'yes'
+    interval_source: []
+  numeric:
+  - age
+  - delta_days
+velocity:
+  latent_channels: 8
+  channels:
+  - 32
+  - 64
+  - 96
+  - 128
+  num_res_blocks: 1
+  attention_levels:
+  - false
+  - false
+  - false
+  - true
+  num_head_channels:
+  - 0
+  - 0
+  - 0
+  - 32
+  norm_num_groups: 8
+  cross_attention_dim: 64
+  batch_size: 1
+flow:
+  max_steps: 2
+  warmup_steps: 1
+  precision: bf16
+  ema_decay: 0.99
+  validation_interval_steps: 1
+  validation_repeats: 1
+sampling:
+  solver: heun
+  steps: 4
+  num_samples: 2
+external_autoencoder:
+  backend: mewm_mri_level_vqgan
+  checkpoint_sha256: '@legacy:symm:configs/mewm_latent_smoke.yaml:external_autoencoder.checkpoint_sha256'
+  codebook_sha256: '@legacy:symm:configs/mewm_latent_smoke.yaml:external_autoencoder.codebook_sha256'
+  numeric_contract: motfm_registered_global_zscore_v1
+  latent_shape_czyx:
+  - 8
+  - 24
+  - 64
+  - 64
+  decode_contract: denormalize_then_quantize_then_decode

@@ -1,0 +1,6 @@
+extends: mu_glioma_zscore_source_bridge_cfm_5090.yaml
+project:
+  name: ispy2-symmflow3d-mu-glioma-zscore-source-bridge05-cfm
+  output_dir: outputs/mu_glioma_zscore_source_bridge05_cfm_5090
+baseline_training:
+  cfm_noise_scale: 0.5

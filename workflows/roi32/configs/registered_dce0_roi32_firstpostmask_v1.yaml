@@ -1,0 +1,138 @@
+schema: registered_dce0_roi32_firstpostmask_v1
+seed: 20260916
+output_dir: '@artifacts/mewm/runs/registered_dce0_roi32_firstpostmask_v1'
+symm_repo: '@repo/.'
+followup_audit:
+  workers: 4
+  registration_repo: '@repo/support/registration'
+  registration_python: '@python'
+  remote_registered_root: '@remote_registered'
+  fetch_missing_transforms: true
+data:
+  bundle_dir: '@workspace/MAM/MOTFM-tumor-first/runs/registered_strict_a_z96_target_oracle/data_bundle.qingyuan_20260804.val102_high_transition'
+  segmentation_dir: '@data/ispy2_first_post_mamamia_segmentation_v1'
+  geometry_audit_dir: '@workspace/.codex/audits/t0_roi_size_selection_20260915'
+  shape_zyx:
+  - 32
+  - 128
+  - 128
+  spacing_zyx_mm:
+  - 2.0
+  - 0.7032
+  - 0.7032
+  crop_policy: largest_native_26_component_t0_bbox_center
+  expected_patients:
+    train: 764
+    val: 102
+  expected_visits:
+    train: 2657
+    val: 382
+  expected_pairs:
+    train: 3462
+    val: 538
+  workers: 2
+vq:
+  model:
+    image_channels: 1
+    hidden_channels: 16
+    embedding_dim: 8
+    n_codes: 16384
+    downsample_factor: 4
+    bottleneck_blocks: 1
+    num_groups: 32
+  batch_size: 4
+  fallback_batch_size: 2
+  learning_rate: 0.0001
+  discriminator_learning_rate: 5.0e-05
+  max_updates: 100000
+  discriminator_start: 10000
+  discriminator_ramp: 10000
+  lr_decay_update: 60000
+  validation_interval: 1000
+  early_stopping_start: 30000
+  early_stopping_patience: 10
+  reconstruction_weight: 4.0
+  perceptual_weight: 4.0
+  commitment_weight: 0.25
+  image_gan_weight: 0.1
+  volume_gan_weight: 0.1
+  feature_matching_weight: 1.0
+fm:
+  batch_size: 4
+  fallback_batch_size: 2
+  max_updates: 100000
+  learning_rate: 0.0001
+  weight_decay: 0.01
+  warmup_updates: 1000
+  ema_decay: 0.9999
+  validation_interval: 1000
+  endpoint_interval: 5000
+  endpoint_samples: 2
+  solver: heun
+  sampling_steps: 25
+  final_samples: 8
+  validation_seed: 1729
+  velocity:
+    spatial_dims: 3
+    latent_channels: 8
+    channels:
+    - 64
+    - 128
+    - 256
+    - 256
+    num_res_blocks: 2
+    attention_levels:
+    - false
+    - false
+    - true
+    - true
+    num_head_channels:
+    - 0
+    - 0
+    - 32
+    - 32
+    norm_num_groups: 32
+    with_conditioning: true
+    cross_attention_dim: 256
+  conditions:
+    token_dim: 256
+    categorical:
+      treatment_arm: []
+      hr_status:
+      - '0'
+      - '1'
+      her2_status:
+      - '0'
+      - '1'
+      mammaprint:
+      - '0'
+      - '1'
+      menopausal_status: []
+      stage_i:
+      - T0
+      - T1
+      - T2
+      stage_j:
+      - T1
+      - T2
+      - T3
+      interval_missing:
+      - 'no'
+      - 'yes'
+      interval_source: []
+    numeric:
+    - age
+    - delta_days
+runtime:
+  precision: bf16
+  deterministic_algorithms: true
+  gradient_clip: 1.0
+  cpu_threads: 4
+  loader_workers: 2
+  log_interval: 25
+  checkpoint_interval: 1000
+  gpu_candidates:
+  - 0
+  - 1
+  disk_reserve_gib: 15
+  queue_poll_seconds: 30

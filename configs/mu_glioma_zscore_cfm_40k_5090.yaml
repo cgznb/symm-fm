@@ -1,0 +1,11 @@
+extends: mu_glioma_zscore_cfm_5090.yaml
+project:
+  name: ispy2-symmflow3d-mu-glioma-zscore-source-conditioned-cfm-40k
+  output_dir: outputs/mu_glioma_zscore_cfm_40k_5090
+baseline_training:
+  max_steps: 40000
+  endpoint_validation_pairs: 8
+  endpoint_validation_samples: 2
+  endpoint_validation_steps: 1
+  endpoint_validation_solver: euler
+  checkpoint_metric: endpoint_mean_mse

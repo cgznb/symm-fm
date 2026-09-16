@@ -1,0 +1,10 @@
+extends: base.yaml
+project:
+  output_dir: outputs/standard_3d
+data:
+  spatial_size:
+  - 64
+  - 128
+  - 128
+flow:
+  gradient_accumulation: 2

@@ -1,0 +1,6 @@
+extends: mu_glioma_zscore_source_bridge_cfm_5090.yaml
+project:
+  name: ispy2-symmflow3d-mu-glioma-zscore-source-bridge-cfm-40k
+  output_dir: outputs/mu_glioma_zscore_source_bridge_cfm_40k_5090
+baseline_training:
+  max_steps: 40000

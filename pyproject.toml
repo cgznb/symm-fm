@@ -1,0 +1,54 @@
+[build-system]
+requires = ["hatchling==1.27.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ispy2-symmflow3d"
+version = "0.1.0"
+description = "Conditional 3D latent SymmFlow for longitudinal I-SPY2 breast MRI"
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+license = "Apache-2.0 AND CC-BY-NC-4.0"
+license-files = ["LICENSE", "docs/third_party_notices.md"]
+authors = [{ name = "I-SPY2 SymmFlow contributors" }]
+dependencies = [
+  "click>=8.1,<9",
+  "numpy>=1.26,<3",
+  "pandas>=2.2,<4",
+  "pydicom>=3.0,<4",
+  "PyYAML>=6.0,<7",
+]
+
+[project.optional-dependencies]
+train = [
+  "einops>=0.8,<1",
+  "monai>=1.5,<2",
+  "nibabel>=5.3,<6",
+  "Pillow>=10,<13",
+  "scikit-image>=0.24,<1",
+  "scipy>=1.14,<2",
+  "torch>=2.8,<3",
+]
+dev = [
+  "pytest>=8,<10",
+  "pytest-cov==6.0.0",
+]
+
+[project.scripts]
+ispy2-symmflow = "ispy2_symmflow.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ispy2_symmflow"]
+
+[tool.pytest.ini_options]
+addopts = "-ra --strict-markers"
+testpaths = ["tests"]
+markers = [
+  "gpu: requires a CUDA GPU",
+  "integration: exercises multiple pipeline stages",
+  "slow: intentionally slower test",
+]
+
+[tool.coverage.run]
+branch = true
+source = ["ispy2_symmflow"]

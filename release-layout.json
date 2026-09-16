@@ -1,0 +1,11 @@
+{
+  "projects": {
+    "symm": ".",
+    "ispy2": "workflows/first_post_three_phase",
+    "mewm": "workflows/roi32",
+    "pillar": "support/pillar",
+    "ispy2_codec": "support/ispy2_codec",
+    "mu_codec": "support/mu_codec",
+    "registration": "support/registration"
+  }
+}

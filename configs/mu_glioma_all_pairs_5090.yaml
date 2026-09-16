@@ -1,0 +1,208 @@
+project:
+  name: ispy2-symmflow3d-mu-glioma-all-pairs
+  seed: 20260909
+  output_dir: outputs/mu_glioma_all_pairs_5090
+  num_workers: 2
+data:
+  root: '@external/DATASETS/mewm-mu-glioma-symmflow'
+  clinical_path: '@external/DATASETS/mewm-mu-glioma-symmflow/clinical/clinical_latest.json'
+  latent_cache_dir: '@external/DATASETS/mewm-mu-glioma-symmflow/continuous_latents'
+  prepared_dir: outputs/mu_glioma_all_pairs_5090/imported_latents
+  time_pair: null
+  time_pairs:
+  - - T1
+    - T2
+  - - T1
+    - T3
+  - - T1
+    - T4
+  - - T1
+    - T5
+  - - T1
+    - T6
+  - - T2
+    - T3
+  - - T2
+    - T4
+  - - T2
+    - T5
+  - - T2
+    - T6
+  - - T3
+    - T4
+  - - T3
+    - T5
+  - - T3
+    - T6
+  - - T4
+    - T5
+  - - T4
+    - T6
+  - - T5
+    - T6
+  pair_sampling: patient_balanced
+  phase_channels:
+  - t1c
+  - t1n
+  - t2f
+  - t2w
+  spatial_size:
+  - 160
+  - 256
+  - 256
+  target_spacing_mm:
+  - 1.0
+  - 1.0
+  - 1.0
+  latent_backend: mewm_mu_glioma_joint4_continuous_v1
+  external_coordinate_frame: brainiac_padded_standardized_index_space_v1
+  registration: none
+  relative_dates_verified: true
+  derived_phase_convention_verified: true
+codec:
+  backend: mewm_mu_glioma_vqgan
+  config_path: '@external/DATASETS/mewm-mu-glioma-symmflow/vqgan/mu_glioma_post_vqgan_shared_h16_d160_v1.yaml'
+  checkpoint_path: '@external/DATASETS/mewm-mu-glioma-symmflow/vqgan/best-composite-68-296424.ckpt'
+  checkpoint_sha256: '@legacy:symm:configs/mu_glioma_all_pairs_5090.yaml:codec.checkpoint_sha256'
+  codebook_sha256: '@legacy:symm:configs/mu_glioma_all_pairs_5090.yaml:codec.codebook_sha256'
+  data_backend: mu_glioma_post
+  data_contract_sha256: '@legacy:symm:configs/mu_glioma_all_pairs_5090.yaml:codec.data_contract_sha256'
+  numeric_contract: mu_glioma_post_brainiac_nonzero_zscore_pad_160x256x256_v1
+  image_shape:
+  - 160
+  - 256
+  - 256
+  modalities:
+  - t1c
+  - t1n
+  - t2f
+  - t2w
+  codebook_min: -48.41423797607422
+  codebook_max: 27.982872009277344
+conditions:
+  token_dim: 128
+  categorical:
+    sex_at_birth: []
+    race: []
+    primary_diagnosis: []
+    who_grade: []
+    previous_brain_tumor: []
+    stereotactic_biopsy_before_resection: []
+    genomic_1p19q:
+    - negative_or_wild_type
+    - positive_or_altered
+    genomic_atrx:
+    - negative_or_wild_type
+    - positive_or_altered
+    genomic_braf_v600e:
+    - negative_or_wild_type
+    - positive_or_altered
+    genomic_cdkn2ab_deletion:
+    - negative_or_wild_type
+    - positive_or_altered
+    genomic_chr7_gain_chr10_loss:
+    - negative_or_wild_type
+    - positive_or_altered
+    genomic_egfr_amplification:
+    - negative_or_wild_type
+    - positive_or_altered
+    genomic_h3_3a:
+    - negative_or_wild_type
+    - positive_or_altered
+    genomic_idh1:
+    - negative_or_wild_type
+    - positive_or_altered
+    genomic_idh2:
+    - negative_or_wild_type
+    - positive_or_altered
+    genomic_mgmt:
+    - negative_or_wild_type
+    - positive_or_altered
+    genomic_pten:
+    - negative_or_wild_type
+    - positive_or_altered
+    genomic_tert_promoter:
+    - negative_or_wild_type
+    - positive_or_altered
+    genomic_tp53:
+    - negative_or_wild_type
+    - positive_or_altered
+    brachytherapy_received:
+    - 'no'
+    - 'yes'
+    chemotherapy_received:
+    - 'no'
+    - 'yes'
+    immunotherapy_received:
+    - 'no'
+    - 'yes'
+    other_therapy_received:
+    - 'no'
+    - 'yes'
+    radiotherapy_received:
+    - 'no'
+    - 'yes'
+    stage_i:
+    - T1
+    - T2
+    - T3
+    - T4
+    - T5
+    stage_j:
+    - T2
+    - T3
+    - T4
+    - T5
+    - T6
+    interval_missing:
+    - 'no'
+    - 'yes'
+    interval_source:
+    - clarity_timeline:source_inclusive_target_exclusive
+  numeric:
+  - age_at_diagnosis_years
+  - delta_days
+velocity:
+  spatial_dims: 3
+  latent_channels: 32
+  channels:
+  - 64
+  - 128
+  - 192
+  - 256
+  num_res_blocks: 2
+  attention_levels:
+  - false
+  - false
+  - true
+  - true
+  num_head_channels:
+  - 0
+  - 0
+  - 32
+  - 64
+  norm_num_groups: 32
+  with_conditioning: true
+  cross_attention_dim: 128
+  batch_size: 1
+flow:
+  sigma_min: 0.0
+  loss_weight_x: 1.0
+  loss_weight_y: 1.0
+  learning_rate: 0.0001
+  weight_decay: 0.05
+  max_steps: 100000
+  warmup_steps: 1000
+  gradient_clip_norm: 1.0
+  gradient_accumulation: 4
+  ema_decay: 0.9999
+  precision: bf16
+  validation_interval_steps: 1000
+  validation_repeats: 1
+  validation_seed: 20260909
+  log_interval_steps: 10
+sampling:
+  solver: heun
+  steps: 16
+  num_samples: 4
+  seed: 20260909

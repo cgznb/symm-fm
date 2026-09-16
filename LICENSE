@@ -1,0 +1,36 @@
+                                 Apache License
+                           Version 2.0, January 2004
+                        http://www.apache.org/licenses/
+
+Copyright 2026 I-SPY2 SymmFlow contributors
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+License scope and third-party exception
+---------------------------------------
+
+Except for the material identified below, the original software in this
+repository is licensed under the Apache License, Version 2.0, as stated
+above.
+
+`src/ispy2_symmflow/models/mewm_vqgan.py` is adapted from the MeWM project at
+commit `[revision retained in original local source]`. It is not licensed under the
+Apache License above. It is distributed under the Creative Commons
+Attribution-NonCommercial 4.0 International license (CC BY-NC 4.0):
+
+    https://creativecommons.org/licenses/by-nc/4.0/legalcode
+
+Attribution, source, modification, and license-version evidence are recorded
+in `docs/third_party_notices.md`. External datasets and pretrained checkpoint
+files are not covered by the Apache license merely because this software can
+load them.

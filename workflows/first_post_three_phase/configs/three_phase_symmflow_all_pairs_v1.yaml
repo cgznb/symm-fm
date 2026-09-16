@@ -1,0 +1,44 @@
+schema: three_phase_symmflow_all_pairs_v1
+seed: 2026
+output_root: '@artifacts/ispy2/runs/three_phase_symmflow_all_pairs_v1_20260915'
+symm_repo: '@repo/.'
+pillar_repo: '@repo/support/pillar'
+pcr_input_config: '@repo/support/pillar/configs/first_post_pcr_v1.yaml'
+source_world_bundle: '@artifacts/ispy2/runs/first_post_world_compare_v1_20260914/shared/bundle.json'
+codec_checkpoint: '@artifacts/ispy2/runs/first_post_world_compare_v1_20260914/shared/codec.pt'
+phase_order:
+- pre_aqc0
+- first_post_aqc1
+- metadata_late
+source_policy: all_forward_real_source
+spatial_policy: target_center_with_source_extent
+initialization: fresh_generator_frozen_codec
+quality:
+  minimum_source_support_coverage: 0.5
+training:
+  max_optimizer_steps: 100000
+  effective_batch_size: 8
+  microbatch: 1
+  learning_rate: 0.0001
+  weight_decay: 0.01
+  warmup_steps: 1000
+  ema_decay: 0.9999
+  light_validation_interval: 1000
+  full_validation_interval: 10000
+  light_validation_pairs: 64
+  checkpoint_interval: 1000
+  solver_steps: 20
+runtime:
+  gpu_priority:
+  - 1
+  - 0
+  poll_seconds: 30
+  memory_fraction: 0.85
+  reserve_gib: 15
+  transfer_workers: 2
+  cpu_threads: 2
+  loader_workers: 2
+  gpu_lock_root: '@workspace/.codex/source_bridge_recovery_20260912/gpu_locks'
+  protected_pcr_runs:
+    0: '@artifacts/pillar/results/single_phase_repeat_pcr_v1_20260915/registered_dce0'
+    1: '@artifacts/pillar/results/single_phase_repeat_pcr_v1_20260915/first_post'

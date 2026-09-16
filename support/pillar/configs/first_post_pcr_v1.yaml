@@ -1,0 +1,61 @@
+schema: first_post_unregistered_tumor_roi_pcr_v1
+output_dir: results/first_post_pcr_v1_20260914
+world_repo: '@repo/workflows/first_post_three_phase'
+world_config: '@repo/workflows/first_post_three_phase/configs/first_post_world_compare_v1.yaml'
+world_run: '@artifacts/ispy2/runs/first_post_world_compare_v1_20260914'
+native_manifest: '@data/ispy2_first_post_unregistered/manifest.json'
+metadata_csv: data/metadata_enriched.csv
+identity_mapping: '@data/qingyuan_acrin_registered_minimal_20260804/metadata/Full-Collection-Ancillary-Patient-Information-file.xlsx'
+remote_root: '@remote_data/02_preprocessed_nifti'
+ssh_settings_source: '@workspace/.codex/audits/first_post_unregistered_transfer_20260912/transfer.py'
+gpu: 1
+reserve_gib: 15
+staging_visits: 32
+transfer_workers: 2
+phase_prefetch_batches: 1
+preprocess_workers: 2
+prefetch_batches: 2
+memory_fraction: 0.9
+extraction_batch_candidates:
+- 1
+- 2
+- 4
+- 8
+training_jobs_candidates:
+- 1
+- 2
+- 4
+- 8
+- 10
+fold_seed: 2026
+seeds:
+- 42
+- 43
+- 44
+- 45
+- 46
+- 47
+- 48
+- 49
+- 50
+- 51
+solver_steps: 20
+generation_seed: 22026
+bootstrap_samples: 2000
+recipes:
+  T0:
+    path: configs/mewm_ispy2_full978_locked102_all_depths_best200_fivefold.yaml
+    variant: best200
+    max_tp: 1
+  T0-T1:
+    path: configs/mewm_ispy2_full978_locked102_all_depths_best200_fivefold.yaml
+    variant: best200
+    max_tp: 2
+  T0-T2:
+    path: configs/mewm_ispy2_full978_locked102_independent_cv_regularization_v2.yaml
+    variant: layerwise_adamw
+    max_tp: 3
+  T0-T3:
+    path: configs/mewm_ispy2_full978_locked102_t0_t3_layerwise_adamw_no_residual_10seed.yaml
+    variant: layerwise_adamw
+    max_tp: 4

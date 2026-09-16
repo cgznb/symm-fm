@@ -1,0 +1,57 @@
+schema_version: mewm_mu_glioma_post_vqgan_config_v1
+data:
+  root: '@data/MU-Glioma-Post'
+  modalities:
+  - t1c
+  - t1n
+  - t2f
+  - t2w
+  input_shape_xyz:
+  - 240
+  - 240
+  - 155
+  output_shape_zyx:
+  - 160
+  - 256
+  - 256
+  pad_zyx:
+  - - 2
+    - 3
+  - - 8
+    - 8
+  - - 8
+    - 8
+  split_seed: 2026
+  train_patient_count: 183
+  val_patient_count: 20
+runtime:
+  output_dir: '@artifacts/mu_codec/runs/mu_glioma_post_vqgan_shared_h16_d160_v1'
+  seed: 2026
+model:
+  image_channels: 1
+  hidden_channels: 16
+  embedding_dim: 8
+  n_codes: 16384
+  downsample_factor: 4
+  bottleneck_blocks: 1
+  num_groups: 32
+  commitment_weight: 0.25
+  ema_decay: 0.99
+  ema_smoothing: 1.0e-07
+  restart_threshold: 1.0
+  nearest_chunk_size: 4096
+training:
+  generator_learning_rate: 9.375e-06
+  discriminator_learning_rate: 4.6875e-06
+  batch_size: 1
+  precision: 16-mixed
+  gradient_clip_val: 1.0
+  adversarial_always_on: true
+  reconstruction_weight: 4.0
+  perceptual_weight: 4.0
+  image_gan_weight: 0.1
+  volume_gan_weight: 0.1
+  feature_matching_weight: 1.0
+  max_epochs: 200
+  early_stopping_patience: 16
+  num_workers: 2

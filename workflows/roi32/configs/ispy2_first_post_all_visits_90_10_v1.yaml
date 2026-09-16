@@ -1,0 +1,66 @@
+schema: ispy2_first_post_unregistered_training_v1
+source_manifest: '@data/ispy2_first_post_unregistered/manifest.json'
+source_verification: '@data/ispy2_first_post_unregistered/verification.json'
+baseline_bundle: '@workspace/MAM/MOTFM-tumor-first/runs/registered_strict_a_z96_target_oracle/data_bundle'
+initial_checkpoint: '@artifacts/mewm/runs/registered_strict_a_mewm_paper_large_v1/vqgan/checkpoints/composite/best-composite-67-247248.ckpt'
+output_dir: '@artifacts/mewm/runs/first_post_all_visits_90_10_tumor_v1_20260913'
+seed: 2026
+cohort:
+  policy: all_visits_preserve_patient_split_v1
+  expected_visits: 3777
+  expected_patients: 1100
+  validation_fraction: 0.1
+  require_phase_metadata: true
+data:
+  phase_index: 1
+  registered: false
+  expected_train_visits: 3397
+  expected_val_visits: 380
+  target_spacing_xyz:
+  - 0.7032
+  - 0.7032
+  - 2.0
+  output_shape_zyx:
+  - 96
+  - 256
+  - 256
+  orientation: LPS
+  training_crop: tumor_union_adaptive
+  validation_crop: tumor_union_adaptive
+  tumor_crop:
+    prepared_data: '@artifacts/mewm/runs/first_post_all_visits_90_10_v1_20260913/data'
+    segmentation_root: '@data/ispy2_first_post_mamamia_segmentation_v1'
+    margin_mm: 20.0
+    empty_mask: full_image_fov
+    components: keep_all
+  normalization: train_resampled_nonzero_global_zscore
+  preparation_workers: 2
+  num_workers: 1
+training:
+  enabled: true
+  max_epochs: 100
+  batch_size: 1
+  precision: 16-mixed
+  generator_learning_rate: 9.375e-06
+  discriminator_learning_rate: 4.6875e-06
+  early_stopping_patience: 16
+  early_stopping_min_delta: 0.0001
+  reconstruction_weight: 4.0
+  perceptual_weight: 4.0
+  image_gan_weight: 0.1
+  volume_gan_weight: 0.1
+  feature_matching_weight: 1.0
+  gradient_clip_val: 1.0
+queue:
+  gpus:
+  - 1
+  lock_root: '@workspace/.codex/source_bridge_recovery_20260912/gpu_locks'
+  reserved_gpu0_queue: '@workspace/.codex/source_bridge_fp32_20260911/gpu0/queue.json'
+  prior_managed_queues:
+  - '@workspace/.codex/source_bridge_recovery_20260912/mu025/queue.json'
+  - '@workspace/.codex/source_bridge_recovery_20260912/mu050/queue.json'
+  poll_seconds: 30
+  admission_memory_gib: 24
+  admission_disk_gib: 15
+  runtime_memory_gib: 8
+  runtime_disk_gib: 8

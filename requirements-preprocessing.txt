@@ -1,0 +1,4 @@
+# Optional raw-image and registration helpers; Python 3.12 is required for this profile.
+itk==5.4.6
+itk-elastix==0.25.3
+nnunetv2>=2.6,<3

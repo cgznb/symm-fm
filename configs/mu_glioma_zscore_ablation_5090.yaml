@@ -1,0 +1,17 @@
+extends: mu_glioma_all_pairs_5090.yaml
+project:
+  name: ispy2-symmflow3d-mu-glioma-zscore-ablation
+  output_dir: outputs/mu_glioma_zscore_ablation_5090
+data:
+  prepared_dir: outputs/mu_glioma_zscore_ablation_5090/imported_latents
+  latent_normalization: train_channel_zscore_v1
+flow:
+  max_steps: 10000
+  warmup_steps: 500
+  ema_decay: 0.999
+  validation_interval_steps: 500
+  endpoint_validation_pairs: 8
+  endpoint_validation_samples: 2
+  endpoint_validation_steps: 8
+  endpoint_validation_solver: heun
+  checkpoint_metric: endpoint_mean_mse

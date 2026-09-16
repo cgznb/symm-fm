@@ -1,0 +1,47 @@
+schema_version: mewm_ispy2_dce0_biflow_data_text_config_v1
+data:
+  backend: registered_t0
+  bundle_json: '@workspace/MAM/MOTFM-tumor-first/runs/registered_strict_a_z96_target_oracle/data_bundle.qingyuan_20260804.val102_high_transition/bundle.json'
+  bundle_contract_sha256: '@legacy:ispy2:configs/ispy2_dce0_biflow_data_text_v1.yaml:data.bundle_contract_sha256'
+  phase_manifest_csv: '@data/qingyuan_acrin_registered_minimal_20260804/metadata/strict_a_20260804/combined_registered_manifest.csv'
+  roi_cache_dir: '@workspace/MAM/MOTFM-tumor-first/runs/registered_strict_a_z96_target_oracle/roi_cache'
+  vqgan_config: '@repo/support/ispy2_codec/configs/ispy2_registered_strict_a_vqgan_large_v1.yaml'
+  vqgan_checkpoint: '@artifacts/mewm/runs/registered_strict_a_mewm_paper_large_v1/vqgan/checkpoints/composite/best-composite-67-247248.ckpt'
+  vqgan_sha256: '@legacy:ispy2:configs/ispy2_dce0_biflow_data_text_v1.yaml:data.vqgan_sha256'
+  continuous_root: '@artifacts/ispy2_codec/runs/ispy2_dce0_ser_post_world_model_v1/continuous_latents'
+  source_modalities:
+  - dce0
+  - ser
+  output_shape_zyx:
+  - 96
+  - 256
+  - 256
+  pair_mode: all_connected_later_endpoints
+  codebook_min: -33.624992
+  codebook_max: 51.080605
+text:
+  model_id: google/medgemma-4b-it
+  revision: '@legacy:ispy2:configs/ispy2_dce0_biflow_data_text_v1.yaml:text.revision'
+  max_length: 512
+  load_in_4bit: true
+  lora_rank: 8
+  lora_alpha: 16
+  lora_dropout: 0.05
+  lora_targets:
+  - q_proj
+  - v_proj
+model:
+  latent_normalization: continuous_codebook_minmax_v1
+  context_dim: 768
+  context_tokens: 4
+  source_mri_shape_czyx:
+  - 2
+  - 96
+  - 256
+  - 256
+  latent_channels: 8
+  latent_shape_czyx:
+  - 8
+  - 24
+  - 64
+  - 64

@@ -1,0 +1,35 @@
+schema: ispy2_first_post_mamamia_segmentation_v1
+source_manifest: '@data/ispy2_first_post_unregistered/manifest.json'
+source_verification: '@data/ispy2_first_post_unregistered/verification.json'
+baseline_bundle: '@workspace/MAM/MOTFM-tumor-first/runs/registered_strict_a_z96_target_oracle/data_bundle'
+model_dir: '@workspace/MAM/mamamia_segmentation_runtime_20260913/model'
+python: '@workspace/MAM/mamamia_segmentation_runtime_20260913/venv/bin/python'
+output_dir: '@data/ispy2_first_post_mamamia_segmentation_v1'
+expected_visits: 3777
+seed: 2026
+pilot_per_visit_orientation: 5
+orientation: LPS
+folds:
+- 0
+- 1
+- 2
+- 3
+- 4
+mirror: true
+tile_step_size: 0.5
+cpu_threads: 4
+queue:
+  gpus:
+  - 0
+  - 1
+  cpu_fallback: true
+  lock_root: '@workspace/.codex/source_bridge_recovery_20260912/gpu_locks'
+  reserved_gpu0_queue: '@workspace/.codex/source_bridge_fp32_20260911/gpu0/queue.json'
+  prior_managed_queues:
+  - '@workspace/.codex/source_bridge_recovery_20260912/mu025/queue.json'
+  - '@workspace/.codex/source_bridge_recovery_20260912/mu050/queue.json'
+  poll_seconds: 10
+  admission_memory_gib: 16
+  admission_disk_gib: 10
+  runtime_memory_gib: 8
+  runtime_disk_gib: 8

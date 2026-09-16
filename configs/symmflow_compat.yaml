@@ -1,0 +1,5 @@
+extends: base.yaml
+project:
+  output_dir: outputs/symmflow_compat
+flow:
+  sigma_min: 0.0001

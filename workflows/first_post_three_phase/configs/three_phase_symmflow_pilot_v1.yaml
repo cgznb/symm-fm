@@ -1,0 +1,40 @@
+schema: three_phase_symmflow_pilot_v1
+seed: 2026
+output_root: '@artifacts/ispy2/runs/three_phase_symmflow_pilot_v1_20260915'
+symm_repo: '@repo/.'
+pillar_repo: '@repo/support/pillar'
+pcr_input_config: '@repo/support/pillar/configs/first_post_pcr_v1.yaml'
+source_cohort: '@artifacts/pillar/results/first_post_pcr_v1_20260914/cohort.json'
+source_world_bundle: '@artifacts/ispy2/runs/first_post_world_compare_v1_20260914/shared/bundle.json'
+codec_checkpoint: '@artifacts/ispy2/runs/first_post_world_compare_v1_20260914/shared/codec.pt'
+phase_order:
+- pre_aqc0
+- first_post_aqc1
+- metadata_late
+spatial_policy: source_t0_grid_no_longitudinal_registration
+source_policy: direct_real_t0
+selection:
+  development_only: true
+  require_complete_four_visits: true
+  train_patients: 12
+  validation_patients: 4
+  codec_check_train_patients: 2
+training:
+  max_optimizer_steps: 2000
+  effective_batch_size: 4
+  microbatch: 1
+  learning_rate: 0.0001
+  weight_decay: 0.01
+  warmup_steps: 200
+  ema_decay: 0.9999
+  validation_interval: 500
+  checkpoint_interval: 250
+  solver_steps: 20
+  seed: 2026
+runtime:
+  physical_gpu: 1
+  memory_fraction: 0.85
+  reserve_gib: 15
+  native_staging_visits: 2
+  transfer_workers: 2
+  cpu_threads: 2

@@ -1,0 +1,36 @@
+extends: mewm_latent_smoke.yaml
+project:
+  output_dir: outputs/mewm_latent_small_gpu
+  num_workers: 2
+conditions:
+  token_dim: 128
+velocity:
+  channels:
+  - 64
+  - 128
+  - 192
+  - 256
+  num_res_blocks: 2
+  attention_levels:
+  - false
+  - false
+  - true
+  - true
+  num_head_channels:
+  - 0
+  - 0
+  - 32
+  - 64
+  norm_num_groups: 32
+  cross_attention_dim: 128
+  batch_size: 1
+flow:
+  max_steps: 100000
+  warmup_steps: 1000
+  precision: bf16
+  ema_decay: 0.9999
+  validation_interval_steps: 1000
+sampling:
+  solver: heun
+  steps: 25
+  num_samples: 8

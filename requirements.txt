@@ -1,0 +1,21 @@
+# Python 3.11 or 3.12. Install the PyTorch build appropriate for the target CUDA.
+torch>=2.8,<3
+numpy>=1.26,<3
+pandas>=2.2,<4
+PyYAML>=6.0,<7
+scipy>=1.14,<2
+scikit-learn>=1.4,<2
+scikit-image>=0.24,<1
+monai>=1.5,<2
+pytorch-lightning>=2.5,<3
+torchmetrics>=1.4,<2
+einops>=0.8,<1
+nibabel>=5.3,<6
+SimpleITK>=2.3,<3
+pydicom>=3.0,<4
+Pillow>=10,<13
+matplotlib>=3.8,<4
+click>=8.1,<9
+openpyxl>=3.1,<4
+omegaconf>=2.3,<3
+pytest>=8,<10

@@ -1,0 +1,14 @@
+extends: mu_glioma_all_pairs_5090.yaml
+project:
+  name: ispy2-symmflow3d-mu-glioma-smoke
+  output_dir: outputs/mu_glioma_smoke_5090
+  num_workers: 0
+flow:
+  max_steps: 2
+  warmup_steps: 1
+  gradient_accumulation: 1
+  validation_interval_steps: 1
+  log_interval_steps: 1
+sampling:
+  steps: 2
+  num_samples: 1

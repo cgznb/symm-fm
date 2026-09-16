@@ -1,0 +1,5 @@
+schema: registered_roi32_external_runner_v1
+shared_config: '@repo/workflows/roi32/configs/registered_dce0_roi32_firstpostmask_v1.yaml'
+runner: '@repo/workflows/roi32/scripts/run_registered_roi32.py'
+python: '@python'
+default_stage: fm

@@ -1,0 +1,126 @@
+extends: base.yaml
+project:
+  name: ispy2-symmflow3d-mewm-all-pairs
+  seed: 20260909
+  output_dir: outputs/mewm_all_pairs_5090
+  num_workers: 4
+data:
+  root: '@external/DATASETS/mewm-ispy2-paired-full'
+  metadata_csv: '@external/DATASETS/mewm-ispy2-paired-full/phase_manifest/combined_registered_manifest.csv'
+  bundle_dir: '@external/DATASETS/mewm-ispy2-paired-full/bundle'
+  latent_cache_dir: '@external/DATASETS/mewm-ispy2-paired-full/continuous_latents'
+  upstream_metadata_dir: '@external/DATASETS/mewm-ispy2-paired-full/geometry_metadata'
+  prepared_dir: outputs/mewm_all_pairs_5090/imported_latents
+  time_pair: null
+  time_pairs:
+  - - T0
+    - T1
+  - - T0
+    - T2
+  - - T0
+    - T3
+  - - T1
+    - T2
+  - - T1
+    - T3
+  - - T2
+    - T3
+  pair_sampling: patient_balanced
+  phase_channels:
+  - dce0
+  spatial_size:
+  - 96
+  - 256
+  - 256
+  target_spacing_mm:
+  - 2.0
+  - 0.7032
+  - 0.7032
+  latent_backend: mewm_continuous_prequantization_v2
+  external_coordinate_frame: t0_fixed_registered_local_v1
+  registration: external_registered_t0
+  registration_assisted: true
+  backward_task_label: registration-assisted reconstruction
+  crop_policy: single_T0_mask_bbox_center_reused_for_all_visits
+  relative_dates_verified: true
+  derived_phase_convention_verified: true
+codec:
+  backend: mewm_vqgan
+  config_path: '@external/DATASETS/mewm-ispy2-paired-full/vqgan/ispy2_registered_strict_a_vqgan_large_v1.yaml'
+  checkpoint_path: '@external/DATASETS/mewm-ispy2-paired-full/vqgan/best-composite-67-247248.ckpt'
+  checkpoint_sha256: '@legacy:symm:configs/mewm_all_pairs_5090.yaml:codec.checkpoint_sha256'
+  data_backend: registered_t0
+  data_contract_sha256: '@legacy:symm:configs/mewm_all_pairs_5090.yaml:codec.data_contract_sha256'
+  codebook_sha256: '@legacy:symm:configs/mewm_all_pairs_5090.yaml:codec.codebook_sha256'
+  numeric_contract: motfm_registered_global_zscore_v1
+  image_shape:
+  - 96
+  - 256
+  - 256
+conditions:
+  token_dim: 256
+  categorical:
+    treatment_arm: []
+    hr_status:
+    - '0'
+    - '1'
+    her2_status:
+    - '0'
+    - '1'
+    mammaprint:
+    - '0'
+    - '1'
+    menopausal_status: []
+    stage_i:
+    - T0
+    - T1
+    - T2
+    stage_j:
+    - T1
+    - T2
+    - T3
+    interval_missing:
+    - 'no'
+    - 'yes'
+    interval_source: []
+  numeric:
+  - age
+  - delta_days
+velocity:
+  spatial_dims: 3
+  latent_channels: 8
+  channels:
+  - 64
+  - 128
+  - 256
+  - 256
+  num_res_blocks: 2
+  attention_levels:
+  - false
+  - false
+  - true
+  - true
+  num_head_channels:
+  - 0
+  - 0
+  - 32
+  - 32
+  norm_num_groups: 32
+  with_conditioning: true
+  cross_attention_dim: 256
+  batch_size: 1
+flow:
+  sigma_min: 0.0
+  max_steps: 100000
+  warmup_steps: 1000
+  gradient_accumulation: 4
+  precision: bf16
+  validation_interval_steps: 1000
+  validation_repeats: 1
+  validation_seed: 1729
+  log_interval_steps: 10
+sampling:
+  solver: heun
+  steps: 25
+  num_samples: 8
+  seed: 20260909
